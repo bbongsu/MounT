@@ -25,8 +25,8 @@
 
 	아이디 : <input type="text" name="id" id="_id" maxlength="20" size="20">		
 	<input type="button" id="btn" value="id확인">
-	<p id="idcheck" style="font-size: 8px"></p>
-	<br><br>
+	<p id="idcheck" style="font-size: 20px"></p>
+	<br>
 	
 	패스워드 : <input type="password" name="pwd" id="_pwd" maxlength="20" minlength="6" placeholder="6자리 이상 입력">
 	<br><br>
@@ -59,6 +59,9 @@
 </form>
 
 <script>
+
+	//////////////////////////////주소지역 찾는 함수~(daum 참고)
+	
     function sample6_execDaumPostcode() 
     {
         new daum.Postcode({
@@ -110,20 +113,23 @@
         }).open();
     }
     
+	//////////////////////////////ID중복체크 함수~
+    
     $("#btn").click(function () 
     {		
 		$.ajax({
-			type:"get",
-			url:"./idcheck.jsp",
-			data:"id=" + $('#id').val(),			
+			type:"post",
+			url:"idcheck.jsp",
+			data:"id=" + $('#_id').val(),			
 			success:function(data){				
-				if(data.trim() == "OK"){
+				if(data.trim() == "OK")
+				{
 					$("#idcheck").css("color", "#0000ff");
 					$("#idcheck").html("사용할 수 있는 id입니다");
 				}else{
 					$("#idcheck").css("color", "#ff0000");
 					$("#idcheck").html("사용 중인 id입니다");		
-					$("#id").val("");
+					$("#_id").val("");
 				}
 			}			
 		});
