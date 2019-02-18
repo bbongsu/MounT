@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBClose {
-
 	public static void close(Connection conn, PreparedStatement psmt, ResultSet rs) {
 		try {
 			if(rs != null) {			
@@ -21,5 +20,5 @@ public class DBClose {
 		}catch (SQLException e) {			
 			e.printStackTrace();
 		}
-	}
+  }
 }
