@@ -8,5 +8,7 @@
 </head>
 <body>
 
+<a href="Myschedule.jsp">일정관리</a>
+
 </body>
 </html>
