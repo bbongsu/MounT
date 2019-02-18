@@ -96,6 +96,7 @@ body
 					<li><a href="">신고하기</a></li>
 				</ul>
 			</li>
+			<li class="nav-item"><a href="Mypage.jsp">마이페이지</a></li>
 		</ul>
 		</div>
 	</nav>
@@ -123,11 +124,11 @@ function carousel()
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) 
   {
-    x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
+  x[myIndex-1].style.display = "block";
   setTimeout(carousel, 5000);    
 }
 

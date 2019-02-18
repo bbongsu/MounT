@@ -67,6 +67,7 @@ public class loginAf extends HttpServlet
 			
 			if(member != null || !member.getId().equals(""))
 			{
+				session = req.getSession(true);
 				session.setAttribute("login", member);
 				session.setMaxInactiveInterval(30*60);
 				System.out.println("[로그인 성공]");
