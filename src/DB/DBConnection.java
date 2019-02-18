@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 public class DBConnection {
 	
 	public static void initConnect() {
@@ -16,11 +15,22 @@ public class DBConnection {
 	}
 	
 	public static Connection getConnection() throws SQLException {		
+		}
+	}
+	
+	public static Connection getConnection() throws SQLException 
+	{		
+
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "hr";
 		String pw = "hr";
 
+
 		Connection conn = DriverManager.getConnection(url, user, pw);
+
+		// Db연결
+		Connection conn = DriverManager.getConnection(url, user, pw);
+    
 		return conn;
 	}
 
