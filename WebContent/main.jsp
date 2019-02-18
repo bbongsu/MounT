@@ -45,7 +45,7 @@ body
 
 .nav-item
 {
-	padding:15px;
+	padding:20px;
 	cursor:pointer;
 }
 
